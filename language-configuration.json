@@ -1,0 +1,39 @@
+{
+    "brackets": [
+        ["[", "]"],
+        ["(", ")"]
+    ],
+    "autoClosingPairs": [
+        {"open": "[", "close": "]"},
+        {"open": "(", "close": ")"}
+    ],
+    "surroundingPairs": [
+        {"open": "[", "close": "]"},
+        {"open": "(", "close": ")"},
+        {"open": "\"", "close": "\""},
+        {"open": "'", "close": "'"}
+    ],
+    "wordPattern": "[a-zA-Z_]+",
+    "tokenizer": {
+        "root": [
+            ["[a-zA-Z_]+", {
+                "cases": {
+                    "@comments": "comment",
+                    "@default": "identifier"
+                }
+            }],
+            ["\\b(Integer|Double|Float)\\b", "type.identifier"],
+            ["[0-9]+", "number"],
+            ["\\[", "bracket.square.open"],
+            ["\\]", "bracket.square.close"],
+            ["\\(", "bracket.parenthesis.open"],
+            ["\\)", "bracket.parenthesis.close"],
+            ["\\{", "bracket.curly.open"],
+            ["\\}", "bracket.curly.close"],
+            ["[\\+\\-\\*\\/\\.=\\=\\<=\\>=]", "keyword.operator"], // Incluidos operadores
+            ["\\b(min|max|sum|in)\\b", "keyword"],
+            ["\\b([a-z][A-Za-z0-9_]*)\\b", "variable.other.local"],
+            ["\\.\\s*([a-z][A-Za-z0-9_]*)", "method"]
+        ]
+    }
+}

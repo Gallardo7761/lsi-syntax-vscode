@@ -1,0 +1,64 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "LSI",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#variables"
+        },
+        {
+            "include": "#methods"
+        },
+        {
+            "include": "#operators"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.lsi",
+                    "match": "\\b(head section|goal section|constraints section|bounds section|int|bin|min|max|sum|in)\\b"
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "name": "support.type.lsi",
+                    "match": "\\b(Integer|Double|Float)\\b"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "name": "variable.other.local.lsi",
+                    "match": "\\b([a-z][A-Za-z0-9_]*)\\b"
+                }
+            ]
+        },
+        "methods": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.lsi",
+                    "match": "\\.[\\s]*([a-z][A-Za-z0-9_]*)"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.lsi",
+                    "match": "\\b(\\+|\\-|\\*|\\/|\\<=|\\>=|\\..|\\=)\\b"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.lsi"
+}

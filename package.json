@@ -1,0 +1,25 @@
+{
+  "name": "lsi-syntax-support",
+  "displayName": "LSI Syntax Support",
+  "description": "Helps visualizing files using LSI Syntax created by LSI department at University of Seville",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "lsi",
+      "aliases": ["LSI", "lsi"],
+      "extensions": [".lsi"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "lsi",
+      "scopeName": "source.lsi",
+      "path": "./syntaxes/lsi.tmLanguage.json"
+    }]
+  }
+}
